@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import { Text, View } from 'react-native';
 
 const Header = (props) => {
-    const {textStyle, viewStyle} = styles;
+    const { textStyle, viewStyle } = styles;
 
     return (
         <View style={viewStyle}>
@@ -19,7 +19,7 @@ const styles = {
         alignItems: 'center',
         height: 60,
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 20},
+        shadowOffset: { width: 0, height: 20 },
         shadowOpacity: 0.9,
         elevation: 2,
         position: 'relative'

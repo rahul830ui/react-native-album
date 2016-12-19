@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Text, View, Image, Linking} from 'react-native';
+import React, { Component } from 'react';
+import { Text, View, Image, Linking } from 'react-native';
 
 import Card from './Card';
 import CardSection from './CardSection';
@@ -31,8 +31,8 @@ class AlbumDetail extends Component {
                 width: null
             }
         };
-        const {album} = this.props;
-        const {title, thumbnail_image, artist, image, url} = album;
+        const { album } = this.props;
+        const { title, thumbnail_image, artist, image, url } = album;
         const {
             thumbnailStyle,
             headerContentStyle,
@@ -40,14 +40,13 @@ class AlbumDetail extends Component {
             headerTextStyle,
             imageStyle
         } = styles;
-        console.log("hello from ad");
         return (
             <Card>
                 <CardSection>
                     <View style={thumbnailContainerStyle}>
                         <Image
                             style={thumbnailStyle}
-                            source={{uri: thumbnail_image}}
+                            source={{ uri: thumbnail_image }}
                         />
                     </View>
                     <View style={headerContentStyle}>
@@ -56,13 +55,13 @@ class AlbumDetail extends Component {
                     </View>
                 </CardSection>
                 <CardSection>
-                    <Image style={imageStyle} source={{uri: image}}/>
+                    <Image style={imageStyle} source={{ uri: image }} />
                 </CardSection>
                 <CardSection>
                     <Button onPress={() => Linking.openURL(url)}>Buy Now</Button>
                 </CardSection>
             </Card>
-        )
+        );
     }
 
 }
